@@ -4,7 +4,7 @@ fs.mkdir('./04-copy-directory/files-copy', {recursive: true}, (err) => {
   if (err) throw err;
 });
 
-const files = fs.promises.readdir('./04-copy-directory/files', {withFileTypes: true});
+const files = fs.promises.readdir('./04-copy-directory/files-copy', {withFileTypes: true});
 for (let file in files) {
   fs.rmdir('./04-copy-directory/files-copy' + '/' + file.name, (err) => {
     if (err) throw err;
